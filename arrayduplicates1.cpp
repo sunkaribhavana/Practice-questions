@@ -2,12 +2,19 @@
 using namespace std;
 int main()
 {
+ int n;
+ cin>>n;
 
-    int a[5]={1,2,2,4,5};
-    int b[5];
-    int c[5];
+    int a[n];
+    int b[n];
+       for(int i=0;i<n;i++)
+
+       {
+         cin>>a[i];
+       }
+
     
-   for(int i=0;i<5;i++)
+   for(int i=0;i<n;i++)
     {
       b[i]=i+1;    
       if(b[i]!=a[i])  
@@ -15,10 +22,10 @@ int main()
      cout<<b[i]<<" ";
     
     }
-     for(int i=0;i<5;i++){
-    a[a[i] % 4] = a[a[i] % 4] +4;
+     for(int i=0;i<n;i++){
+    a[a[i] % (n-1)] = a[a[i] % (n-1)] +(n-1);
       
-        if (a[i] >= 4*2)  
+        if (a[i] >= (n-1)*2)  
         { 
             cout << i << " "; 
         } 
